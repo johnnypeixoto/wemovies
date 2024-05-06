@@ -11,6 +11,7 @@ export function useGetMovies() {
       .then((response) => response.json())
       .catch((err) => {
         setMovies([])
+        console.error(err)
       })
       .then((data) => {
         setMovies(data.products);
